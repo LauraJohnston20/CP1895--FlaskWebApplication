@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+     <div class="mb-3">
+      <label for="formControlInput" class="form-label">Recipe Name</label>
+      <input type="email" class="form-control" id="formControlInput" placeholder="">
+    </div>
+    <div class="mb-3">
+      <label for="formControlText1" class="form-label">Ingredients List</label>
+      <textarea class="form-control" id="formControlText1" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="formControlText2" class="form-label">Preparation Instructions</label>
+      <textarea class="form-control" id="formControlText2" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="imageFile" class="form-label">Recipe Image</label>
+      <input class="form-control" type="file" id="imageFile">
+    </div>
+    <button>Submit</button>
+{% endblock content %}

@@ -1,0 +1,8 @@
+{% extends "layout.html "%}
+{% block content %}
+    <h1 style="text-align: center">Recipe Images</h1>
+      {% for image in recipe_images %}
+        <img class="img" src="static/images/{{ image[0] }}" ></img>
+        <h2 style="text-align:center">{{ image[1] }}</h2>
+      {%endfor%}
+{% endblock content %}
