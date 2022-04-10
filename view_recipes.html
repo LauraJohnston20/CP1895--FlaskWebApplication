@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for dict_item in recipe_list %}
+       {% for key, value in dict_item.items() %}
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="url_for( {static/images} )" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{value}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button name="expand" id="expand" type="button" class="btn btn-sm btn-outline-secondary">Expand</button>
+            </div>
+          </div>
+          <br>
+       {% endfor %}
+    {% endfor %}
+{% endblock content %}
+
