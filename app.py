@@ -19,8 +19,6 @@ def home():
 @app.route("/view_recipes")
 def view_recipes():
     recipe_list = read_from_csv()
-    print(recipe_list)
-    print("laura poo")
     return render_template('view_recipes.html', recipe_list=recipe_list)
 
 
