@@ -30,13 +30,13 @@ def add_recipes():
         prep_instructions = request.form["prepInstructions"]
         uploaded_file = request.files["imageFile"]
 
-        if recipe_name != " " or ingredients != " " or prep_instructions != " " \
-                or uploaded_file.filname != " ":
+        if recipe_name != "" or ingredients != "" or prep_instructions != "" \
+                or uploaded_file.filename != "":
             uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], uploaded_file.filename))
 
             columns = ['Name', 'Ingredients', 'Prep', 'File']
-            all_recipes = []
-            recipe = {'Name': recipe_name, 'Ingredients': ingredients, 'Prep': prep_instructions, 'File': uploaded_file}
+            all_recipes = read_from_csv()
+            recipe = {'Name': recipe_name, 'Ingredients': ingredients, 'Prep': prep_instructions, 'File': uploaded_file.filename}
             all_recipes.append(recipe)
             write_to_csv(all_recipes, columns)
             print(all_recipes)
@@ -55,7 +55,7 @@ def delete_recipe():
 
 
 def write_to_csv(all_recipes, columns):
-    with open("recipes.csv", 'a', newline='') as csvfile:
+    with open("recipes.csv", 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=columns)
         writer.writeheader()
         for key in all_recipes:
