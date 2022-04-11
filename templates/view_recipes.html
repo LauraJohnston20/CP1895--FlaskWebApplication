@@ -1,4 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-     <h1>View Recipes</h1>
+    {% for dict_item in recipe_list %}
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="static/images/{{ dict_item['File'] }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ dict_item['Name'] }}</h5>
+              <p class="card-text">{{ dict_item['Ingredients']}}</p>
+                <p class="card-text">{{ dict_item['Prep']}}</p>
+              <button name="expand" id="expand" type="button" class="btn btn-sm btn-outline-secondary">Expand</button>
+            </div>
+          </div>
+          <br>
+
+    {% endfor %}
 {% endblock content %}
+
