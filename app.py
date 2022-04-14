@@ -1,5 +1,3 @@
-from random import choice
-
 from flask import Flask, render_template, url_for, request
 import csv
 import os
@@ -51,16 +49,28 @@ def add_recipes():
 @app.route("/delete_recipe", methods=["POST", "GET"])
 def delete_recipe():
     recipe_list = read_from_csv()
-    #columns = ['Name', 'Ingredients', 'Prep', 'File']
+    columns = ['Name', 'Ingredients', 'Prep', 'File']
     print(recipe_list)
     if request.method == "POST":
         recipe_name = request.form['delete_select']
-        print(str(recipe_name))
-
-
+        for i in range(len(recipe_list)):
+            if recipe_list[i]['Name'] == recipe_name:
+                image = recipe_list[i]['File']
+                path = 'static/images'
+                file = os.path.join(path, image)
+                os.remove(file)
+                del recipe_list[i]
+                break
+        write_to_csv(recipe_list, columns)
+        print(recipe_list)
     else:
         return render_template('delete_recipe.html', recipe_list=recipe_list)
     return render_template('delete_recipe.html', recipe_list=recipe_list)
+
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    return render_template('login.html')
 
 
 def write_to_csv(all_recipes, columns):
