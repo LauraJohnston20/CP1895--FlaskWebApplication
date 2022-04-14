@@ -1,3 +1,5 @@
+from random import choice
+
 from flask import Flask, render_template, url_for, request
 import csv
 import os
@@ -8,11 +10,8 @@ app.config['UPLOAD_PATH'] = 'static/images'
 @app.route("/")
 @app.route("/home")
 def home():
-    recipe_images = []
-    with open("photos.csv", newline="") as file:
-        reader = csv.reader(file)
-        for row in reader:
-            recipe_images.append(row)
+    recipe_images = os.listdir(os.path.join(app.static_folder, "images"))
+    print(recipe_images)
     return render_template("home.html", recipe_images=recipe_images)
 
 
@@ -33,10 +32,10 @@ def add_recipes():
         if recipe_name != "" or ingredients != "" or prep_instructions != "" \
                 or uploaded_file.filename != "":
             uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], uploaded_file.filename))
-
             columns = ['Name', 'Ingredients', 'Prep', 'File']
             all_recipes = read_from_csv()
-            recipe = {'Name': recipe_name, 'Ingredients': ingredients, 'Prep': prep_instructions, 'File': uploaded_file.filename}
+            recipe = {'Name': recipe_name, 'Ingredients': ingredients, 'Prep': prep_instructions,
+                      'File': uploaded_file.filename}
             all_recipes.append(recipe)
             write_to_csv(all_recipes, columns)
             print(all_recipes)
@@ -49,9 +48,19 @@ def add_recipes():
         return render_template('add_recipes.html', title='Add Recipes')
 
 
-@app.route("/delete_recipe")
+@app.route("/delete_recipe", methods=["POST", "GET"])
 def delete_recipe():
-    return render_template('delete_recipe.html', title='Delete Recipe')
+    recipe_list = read_from_csv()
+    #columns = ['Name', 'Ingredients', 'Prep', 'File']
+    print(recipe_list)
+    if request.method == "POST":
+        recipe_name = request.form['delete_select']
+        print(str(recipe_name))
+
+
+    else:
+        return render_template('delete_recipe.html', recipe_list=recipe_list)
+    return render_template('delete_recipe.html', recipe_list=recipe_list)
 
 
 def write_to_csv(all_recipes, columns):
