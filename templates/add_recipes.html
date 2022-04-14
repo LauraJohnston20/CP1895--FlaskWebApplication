@@ -1,21 +1,27 @@
 {% extends "layout.html" %}
 {% block content %}
+    <form method="post" action="#" enctype="multipart/form-data" id="addRecipeForm" style="margin:auto">
+         <div class="mb-3">
+          <label for="recipeName" class="form-label">Recipe Name</label>
+          <input type="text" class="form-control" name="recipeName" id="recipeName">
+        </div>
+        <div class="mb-3">
+          <label for="ingredientsList" class="form-label">Ingredients List</label>
+          <textarea name="ingredientsList" class="form-control" id="ingredientsList" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="prepInstructions" class="form-label">Preparation Instructions</label>
+          <textarea name="prepInstructions" class="form-control" id="prepInstructions" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="imageFile" class="form-label">Recipe Image</label>
+          <input name="imageFile" class="form-control" type="file" id="imageFile">
+        </div>
+        <div class="mb-3">
+            <button type="submit" id="submitRecipe">Submit Recipe</button>
+        </div>
+    </form>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.0-min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/validateRecipe.js')}}"></script>
 
-     <div class="mb-3">
-      <label for="formControlInput" class="form-label">Recipe Name</label>
-      <input type="email" class="form-control" id="formControlInput" placeholder="">
-    </div>
-    <div class="mb-3">
-      <label for="formControlText1" class="form-label">Ingredients List</label>
-      <textarea class="form-control" id="formControlText1" rows="3"></textarea>
-    </div>
-    <div class="mb-3">
-      <label for="formControlText2" class="form-label">Preparation Instructions</label>
-      <textarea class="form-control" id="formControlText2" rows="3"></textarea>
-    </div>
-    <div class="mb-3">
-      <label for="imageFile" class="form-label">Recipe Image</label>
-      <input class="form-control" type="file" id="imageFile">
-    </div>
-    <button>Submit</button>
 {% endblock content %}
