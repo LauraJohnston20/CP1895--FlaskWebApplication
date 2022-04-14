@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3">
           <label for="imageFile" class="form-label">Recipe Image</label>
-          <input name="imageFile" class="form-control" type="file" id="imageFile">
+          <input name="imageFile" class="form-control" type="file" id="imageFile" onchange="return fileValidation()">
         </div>
         <div class="mb-3">
             <button type="submit" id="submitRecipe">Submit Recipe</button>
