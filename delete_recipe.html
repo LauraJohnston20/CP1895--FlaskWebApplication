@@ -1,4 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
-     <h1>Delete Recipe</h1>
+     <h3>Choose recipe to delete</h3>
+     <select name="delete_select" id="delete_select" class="form-select" aria-label="Default select example">
+          {% for dict_item in recipe_list %}
+               <option name="delete" value="{{ dict_item['Name'] }}">{{ dict_item['Name'] }}</option>
+          {% endfor %}
+     </select>
+     <br><br>
+     <button type="submit" id="submit">Confirm Recipe</button>
+
+     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.0-min.js') }}"></script>
+     <script type="text/javascript" src="{{ url_for('static', filename='js/deleteRecipe.js')}}"></script>
+
 {% endblock content %}
