@@ -4,23 +4,6 @@ $(document).ready( () => {
 
      $("#recipeName").focus();
 
-     // validate image file
-    function fileValidation() {
-            var fileInput =
-                document.getElementById('imageFile');
-
-            var filePath = fileInput.value;
-
-            // Allowing file type
-            var allowedExtensions = /(\.jpeg|\.jpg|\.png)$/i;
-
-            if (!allowedExtensions.exec(filePath)) {
-                alert('Invalid file type');
-                fileInput.value = '';
-                return isValid = false;
-            }
-        }
-
     $("#submitRecipe").click( evt => {
         let isValid = true;
 
@@ -53,6 +36,13 @@ $(document).ready( () => {
             isValid = false;
         }
         $("#prepInstructions").val(prepInstructions);
+
+        // validate file extension
+        let file_extension = $("#imageFile").val().split('.').pop().toLowerCase();
+        if ($.inArray(file_extension, ["png","jpg","jpeg"]) == -1) {
+            alert("Invalid file extension. Must be .png, .jpg, .jpeg.");
+            isValid = false;
+        }
 
         if (isValid === false) {
             evt.preventDefault();
