@@ -30,18 +30,18 @@ Click register
 ### Step 2:
 Fill out the register form and click Register
 
-![image](https://user-images.githubusercontent.com/95102375/163734744-e88e6a0d-3b6f-4825-83a0-ca81bbcbb2f8.png)
+![image](https://user-images.githubusercontent.com/95102375/163735214-6a9d5115-7a50-472e-a7d5-7aff8e730add.png)
 ### Step 3: 
 After registration is completed, you will be automatically redirected to the login page. Fill out the login form and click Login
 
-![image](https://user-images.githubusercontent.com/95102375/163734729-49e3d34b-8b98-4d85-bf07-0f3493d254b7.png)
+![image](https://user-images.githubusercontent.com/95102375/163735178-d4263170-920f-40b2-8af2-d66e2f2e94a9.png)
 ## Add a Recipe
 ### Step 1:
 Click the Add Recipes link in the navigation bar
 ![image](https://user-images.githubusercontent.com/95102375/163734684-5c586c5c-da75-4e41-ba67-ee8a4017e88d.png)
 ### Step 2:
 Fill out the recipe form by entering the recipe name, ingredients list, preparation instructions, and recipe image. The recipe must have file extension .jpeg, .jpg, or .png.
-![image](https://user-images.githubusercontent.com/95102375/163734913-93f6b923-ae06-43a8-a22b-7b3c9e86b41a.png)
+![image](https://user-images.githubusercontent.com/95102375/163735225-f2b590f8-d92f-414e-9dc0-bbbb7f20e628.png)
 ### Step 3:
 Click the 'Submit Recipe' button to add the recipe.
 ![image](https://user-images.githubusercontent.com/95102375/163734895-3ade9c79-5da1-4475-822b-e853afd25721.png)
@@ -52,7 +52,7 @@ Click the View Recipes link in the navigation bar
 ### Step 2:
 All added recipes will be available on the View Recipes page. To view a specific recipes ingredients or prep instructions, click on the corresponding button for that recipe.
 
-![image](https://user-images.githubusercontent.com/95102375/163735026-5b699909-020f-49aa-a005-f90e751027d4.png)
+![image](https://user-images.githubusercontent.com/95102375/163735243-61b81a5f-63d2-4491-b6f3-c9ce133bf0c8.png)
 ## View Recipes
 ### Step 1:
 Click the View Recipes link in the navigation bar
