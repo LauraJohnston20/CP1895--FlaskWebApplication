@@ -63,10 +63,8 @@ def delete_recipe():
                 os.remove(file)
                 del recipe_list[i]
                 break
+        flash("Recipe successfully deleted.")
         write_to_csv(recipe_list, columns)
-        print(recipe_list)
-    else:
-        return render_template('delete_recipe.html', recipe_list=recipe_list, title='Delete Recipe')
     return render_template('delete_recipe.html', recipe_list=recipe_list, title='Delete Recipe')
 
 
