@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .imageFormat {
     display: block;
-    margin-left: 105%;
+    margin-left: 113%;
     margin-right: auto;
     width: 90%;
     align:center;
@@ -58,6 +58,8 @@ h1, h2, h3, h4, h5, h6 {
     border-width: thin;
 }
 
-.btn btn-primary {
-
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
 }
