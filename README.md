@@ -22,6 +22,28 @@ flask run
 ```
 Now the application is ready to be used.
 # Using the Application
-## Step 1:
-## Step 2:
-## Step 3: 
+## Register
+An account is not required to use the application, but if the user wishes to create an account they can navigate to the register page in the upper right hand corner of the webpage. 
+### Step 1:
+Click register
+![image](https://user-images.githubusercontent.com/95102375/163734480-00907713-80fb-4746-b212-57f30d455c58.png)
+### Step 2:
+Fill out the register form and click Register
+
+![image](https://user-images.githubusercontent.com/95102375/163734744-e88e6a0d-3b6f-4825-83a0-ca81bbcbb2f8.png)
+### Step 3: 
+After registration is completed, you will be automatically redirected to the login page. Fill out the login form and click Login
+
+![image](https://user-images.githubusercontent.com/95102375/163734729-49e3d34b-8b98-4d85-bf07-0f3493d254b7.png)
+## Add a Recipe
+### Step 1:
+Click the Add Recipes link in the navigation bar
+![image](https://user-images.githubusercontent.com/95102375/163734684-5c586c5c-da75-4e41-ba67-ee8a4017e88d.png)
+### Step 2:
+Fill out the recipe form by entering the recipe name, ingredients list, preparation instructions, and recipe image. The recipe must have file extension .jpeg, .jpg, or .png.
+![image](https://user-images.githubusercontent.com/95102375/163734913-93f6b923-ae06-43a8-a22b-7b3c9e86b41a.png)
+### Step 3:
+Click the 'Submit Recipe' button to add the recipe.
+![image](https://user-images.githubusercontent.com/95102375/163734895-3ade9c79-5da1-4475-822b-e853afd25721.png)
+
+
