@@ -45,5 +45,26 @@ Fill out the recipe form by entering the recipe name, ingredients list, preparat
 ### Step 3:
 Click the 'Submit Recipe' button to add the recipe.
 ![image](https://user-images.githubusercontent.com/95102375/163734895-3ade9c79-5da1-4475-822b-e853afd25721.png)
+## View Recipes
+### Step 1:
+Click the View Recipes link in the navigation bar
+![image](https://user-images.githubusercontent.com/95102375/163734971-b688310f-e3fb-4642-a70e-4fb27ad64fce.png)
+### Step 2:
+All added recipes will be available on the View Recipes page. To view a specific recipes ingredients or prep instructions, click on the corresponding button for that recipe.
+
+![image](https://user-images.githubusercontent.com/95102375/163735026-5b699909-020f-49aa-a005-f90e751027d4.png)
+## View Recipes
+### Step 1:
+Click the View Recipes link in the navigation bar
+![image](https://user-images.githubusercontent.com/95102375/163735055-a2c2964e-60c4-49dc-913b-3befe6ebb888.png)
+### Step 2:
+Select the recipe to delete from the dropdown list
+
+![image](https://user-images.githubusercontent.com/95102375/163735134-d25ef7d1-da18-431b-970c-0fb0392dd479.png)
+### Step 3:
+Confirm the recipe to be deleted by clicking 'Confirm Recipe'
+
+![image](https://user-images.githubusercontent.com/95102375/163735116-1de05cf8-b513-4ae6-9a1a-fabd2f3fcf51.png)
+
 
 
