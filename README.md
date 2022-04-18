@@ -11,8 +11,6 @@ Navigate to the terminal in your Python project, or to the Command Prompt, and r
 ```python
 pip install flask
 ```
-Note: If you have not created a virtual environment within your project, follow the steps for creating and activating an environment, found here:
-https://flask.palletsprojects.com/en/2.1.x/installation/.
 ## Step 3:
 To start the Flask application, run the following commands in the terminal, or Command Prompt:
 ```python
