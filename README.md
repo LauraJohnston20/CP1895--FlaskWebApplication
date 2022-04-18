@@ -16,7 +16,7 @@ https://flask.palletsprojects.com/en/2.1.x/installation/.
 ## Step 3:
 To start the Flask application, run the following commands in the terminal, or Command Prompt:
 ```python
-Flask_APP="app.py"
+FLASK_APP="app.py"
 flask run
 ```
 Now the application is ready to be used.
