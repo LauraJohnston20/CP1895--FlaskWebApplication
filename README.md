@@ -2,6 +2,12 @@
 Advanced Python Programming Course Project - Flask Web Application
 ## Description
 This flask application was created as a requisite for CP1895 Advanced Python Programming. This application will allow users to view, add and, delete recipes based on the user preference. To add a recipe the user must enter the recipe name, ingredients list, preparation instructions, and a corresponding image. The image is validated by checking the file extension. To delete a recipe, the user must select their choice from the dropdown and confirm their choice by clicking the 'Confirm Recipe' button. The View Recipes page shows each recipe name and image. To view the ingredients and prep instructions, the user can click on the corresponding button. The home page lists all recipe images as thumbnails which can be clicked to open the image in a new tab. The user is also able to register and login, each located on separated pages, and logout of an account. To navigate between pages, the user can click the desired link in the navigation bar located on each page. 
+## Summary of Files
+* **static folder**: contains all asset files to be used by the templates, including main.css (main styling sheet), images folder (recipe images), and js folder (jquery file, jquery-3.6.0-min.js and recipe validation file, validateRecipe.js).
+* **templates folder**: contains .html files that are to be rendered in the browser. These files have both static data and placeholders for dynamic data.
+* **app.py**: main python file that imports the Flask module to create the web application.
+* **recipes.csv** csv file in which the recipe information is stored.
+* **recipes.db** database file in which usernames and password are stored for login/registration.
 # Download & Installation
 ## Step 1:
 * Download the files located in the git repo https://github.com/LauraJohnston20/CP1895-FlaskWebApplication or [click here](https://github.com/LauraJohnston20/CP1895-FlaskWebApplication/archive/refs/heads/main.zip).
