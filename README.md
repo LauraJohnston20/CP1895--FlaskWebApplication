@@ -14,7 +14,7 @@ pip install flask
 ## Step 3:
 To start the Flask application, run the following commands in the terminal, or Command Prompt:
 ```python
-FLASK_APP="app.py"
+set FLASK_APP=app.py
 flask run
 ```
 Now the application is ready to be used.
